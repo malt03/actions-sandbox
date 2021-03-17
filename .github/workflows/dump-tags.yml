@@ -1,0 +1,12 @@
+name: "Dump Tags"
+on:
+  push:
+    branches: ["main"]
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      
+      - name: Dump
+        run: git tag
