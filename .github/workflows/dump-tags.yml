@@ -8,5 +8,8 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       
+      - name: Hash
+        run: git rev-parse HEAD
+        
       - name: Dump
         run: git tag
