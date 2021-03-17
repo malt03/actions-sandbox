@@ -8,6 +8,8 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       
+      - run: git fetch --prune --unshallow --tags
+      
       - name: Hash
         run: git rev-parse HEAD
         
